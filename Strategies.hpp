@@ -77,7 +77,7 @@ bool Strategy_t<Strategy>::payBills(const unsigned int & currMonth,
       // COMPLETE BELOW:
       // COMPUTE THE TOTAL PENALTY IN VARIABLE  <fee> AS
       // 35 + round(0.1 * days overdue * amount due) / 100
-      fee = 35 + round(0.1 * someBill.daysOverdue(currMonth,currDay) * someBill.amount_due_) / 100;
+      fee = 35 + round(0.1*someBill.daysOverdue(currMonth,currDay)*someBill.amount_due_)/100;
     }
 
     if( someBill.amount_due_ + fee <= myChecking_.amount_left_ ) {
